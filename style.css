@@ -170,12 +170,12 @@ footer:hover {
   border-radius: 50%;
   border: 1px solid var(--border-toogle-icon-color);
 
+  animation: slide-back 0.4s;
   background: white var(--bg-toogle-icon) no-repeat center;
 }
 
 .light #switcher button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switcher span {
@@ -196,5 +196,25 @@ footer:hover {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
   }
 }
